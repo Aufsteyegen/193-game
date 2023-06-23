@@ -1,0 +1,69 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+  
+.bx-play {
+    font-size: 160px;
+    color: blue;
+    padding: 0;
+}
+  
+i.bx.bx-play {
+    display: flex;
+    padding: 0;
+    width: fit-content;
+}
+
+.bx-play:hover {
+    color: white;
+}
+
+button { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.loading-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background-color: rgba(242, 242, 242, 0.5);
+    width: 800px;
+    height: 550px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+.loading-message {
+    margin-top: 440px;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in-out 1.1s forwards;
+    font-family: 'Noto Sans KR', sans-serif;
+}

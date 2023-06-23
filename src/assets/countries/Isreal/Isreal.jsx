@@ -7,7 +7,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/Isreal.glb')
+  const { nodes, materials } = useGLTF('src/assets/countries/Isreal/Isreal.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.009']} />
@@ -15,4 +15,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/Isreal.glb')
+useGLTF.preload('src/assets/countries/Isreal/Isreal.glb')

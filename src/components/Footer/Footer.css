@@ -1,0 +1,8 @@
+.footer {
+    background-color: hsla(0, 0%, 98%, 0.854);
+    height: 118.5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
