@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.2.3 /Users/main/Desktop/3143-game/src/assets/countries/Et
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export function Ethiopia(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Ethiopia/Ethiopia.glb')
   return (
     <group {...props} dispose={null}>

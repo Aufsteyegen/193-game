@@ -6,23 +6,19 @@ Command: npx gltfjsx@6.2.3 /Users/main/Desktop/3143-game/src/assets/countries/AL
 import React, { useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-    const { nodes, materials } = useGLTF('src/assets/countries/ALBANIA/ALBANIA.glb')
+export function Albania(props) {
+    const { nodes, materials } = useGLTF('src/assets/countries/Albania/ALBANIA.glb')
     return (
       <group {...props} dispose={null}>
-        <group
-          rotation={[Math.PI / 2, Math.PI, Math.PI]}
-        >
           <mesh geometry={nodes.Curve.geometry} material={materials.SVGMat}>
-            <meshStandardMaterial
+          <meshStandardMaterial
               roughness={0.10}
               metalness={0.25}
               color={'black'}
-            />
-          </mesh>
-        </group>
+            /></mesh>
+
       </group>
     )
 }
   
- useGLTF.preload('src/assets/countries/ALBANIA/ALBANIA.glb')
+ useGLTF.preload('src/assets/countries/Albania/ALBANIA.glb')

@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.2.3 /Users/main/Desktop/3143-game/src/assets/countries/AN
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('src/assets/countries/ANDORRA/ANDORRA.glb')
+export function Andorra(props) {
+  const { nodes, materials } = useGLTF('src/assets/countries/Andorra/ANDORRA.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} />
@@ -15,4 +15,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('src/assets/countries/ANDORRA/ANDORRA.glb')
+useGLTF.preload('src/assets/countries/Andorra/ANDORRA.glb')
