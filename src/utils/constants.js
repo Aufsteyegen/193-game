@@ -86,7 +86,7 @@ import { Nigeria } from '/src/assets/countries/Nigeria/Nigeria'
 import { DemocraticPeoplesRepublicofKorea } from '/src/assets/countries/DemocraticPeoplesRepublicofKorea/DemocraticPeoplesRepublicofKorea'
 import { Bahrain } from '/src/assets/countries/Bahrain/Bahrain'
 import { Albania } from '/src/assets/countries/Albania/Albania'
-import { AntiguaandBarbudaMap } from '/src/assets/countries/AntiguaandBarbudaMap/AntiguaandBarbudaMap'
+import { AntiguaandBarbuda } from '/src/assets/countries/AntiguaandBarbuda/AntiguaandBarbuda'
 import { Mongolia } from '/src/assets/countries/Mongolia/Mongolia'
 import { Uruguay } from '/src/assets/countries/Uruguay/Uruguay'
 import { Venezuela } from '/src/assets/countries/Venezuela/Venezuela'
@@ -101,7 +101,7 @@ import { Algeria } from '/src/assets/countries/Algeria/Algeria'
 import { Bahamas } from '/src/assets/countries/Bahamas/Bahamas'
 import { Switzerland } from '/src/assets/countries/Switzerland/Switzerland'
 import { Jamaica } from '/src/assets/countries/Jamaica/Jamaica'
-import { Isreal } from '/src/assets/countries/Isreal/Isreal'
+import { Israel } from '/src/assets/countries/Israel/Israel'
 import { Mozambique } from '/src/assets/countries/Mozambique/Mozambique'
 import { Angola } from '/src/assets/countries/Angola/Angola'
 import { Liechtenstein } from '/src/assets/countries/Liechtenstein/Liechtenstein'
@@ -163,7 +163,7 @@ import { VietNam } from '/src/assets/countries/VietNam/VietNam'
 import { Cuba } from '/src/assets/countries/Cuba/Cuba'
 import { Kazakhstan } from '/src/assets/countries/Kazakhstan/Kazakhstan'
 import { Bangladesh } from '/src/assets/countries/Bangladesh/Bangladesh'
-import { CaboVerdeMap } from '/src/assets/countries/CaboVerdeMap/CaboVerdeMap'
+import { CaboVerde } from '/src/assets/countries/CaboVerde/CaboVerde'
 import { Greece } from '/src/assets/countries/Greece/Greece'
 import { Rwanda } from '/src/assets/countries/Rwanda/Rwanda'
 import { Egypt } from '/src/assets/countries/Egypt/Egypt'
@@ -190,14 +190,14 @@ import { DominicanRepublic } from '/src/assets/countries/DominicanRepublic/Domin
 import { Paraguay } from '/src/assets/countries/Paraguay/Paraguay'
 import { GuineaBissau } from '/src/assets/countries/GuineaBissau/GuineaBissau'
 
-export const COUNTRIES = ["Albania","Algeria","Andorra","Angola","AntiguaandBarbudaMap","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","BosniaandHerzegovina","Botswana","Brazil","Brunei","Bulgaria","BurkinaFaso","Burundi","CaboVerdeMap","Cambodia","Cameroon","Canada","CentralAfricanRepublic","Chad","Chile","China","Colombia","Comoros","Congo","CostaRica","Croatia","Cuba","Cyprus","CzechRepublic","DemocraticPeoplesRepublicofKorea","Denmark","Djibouti","Dominica","DominicanRepublic","Ecuador","Egypt","ElSalvador","EquatorialGuinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","GuineaBissau","Guyana","Haiti","Honduras","HongKong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isreal","Italy","IvoryCoast","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","LaoPeoplesDemocraticRepublic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Madagascar","Malawi","Malaysia","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","NewZealand","Nicaragua","Niger","Nigeria","NorthMacedonia","Norway","Oman","Pakistan","Palau","Panama","PapuaNewGuinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","RepublicofKorea","Romania","RussianFederation","Rwanda","SaintKittsandNevis","SaintLucia","SaintVincentandtheGrenadines","Samoa","SanMarino","SaoTomeandPrincipe","SaudiArabia","Senegal","Serbia","Seychelles","SierraLeone","Singapore","Slovakia","Slovenia","SolomonIslands","Somalia","SouthAfrica","SouthSudan","Spain","SriLanka","Sudan","Suriname","Sweden","Switzerland","SyrianArabRepublic","Taiwan","Tajikistan","Tanzania","Thailand","Timor_Leste","Togo","Tonga","TrinidadandTobago","Tunisia","Turkey","Turkmenistan","Uganda","Ukraine","UnitedArabEmirates","UnitedKingdom","UnitedStatesofAmerica","Uruguay","Uzbekistan","Vanuatu","Venezuela","VietNam","Yemen","Zambia","Zimbabwe"]
+export const COUNTRIES = ["Albania","Algeria","Andorra","Angola","AntiguaandBarbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","BosniaandHerzegovina","Botswana","Brazil","Brunei","Bulgaria","BurkinaFaso","Burundi","CaboVerde","Cambodia","Cameroon","Canada","CentralAfricanRepublic","Chad","Chile","China","Colombia","Comoros","Congo","CostaRica","Croatia","Cuba","Cyprus","CzechRepublic","DemocraticPeoplesRepublicofKorea","Denmark","Djibouti","Dominica","DominicanRepublic","Ecuador","Egypt","ElSalvador","EquatorialGuinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","GuineaBissau","Guyana","Haiti","Honduras","HongKong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","IvoryCoast","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","LaoPeoplesDemocraticRepublic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Madagascar","Malawi","Malaysia","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","NewZealand","Nicaragua","Niger","Nigeria","NorthMacedonia","Norway","Oman","Pakistan","Palau","Panama","PapuaNewGuinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","RepublicofKorea","Romania","RussianFederation","Rwanda","SaintKittsandNevis","SaintLucia","SaintVincentandtheGrenadines","Samoa","SanMarino","SaoTomeandPrincipe","SaudiArabia","Senegal","Serbia","Seychelles","SierraLeone","Singapore","Slovakia","Slovenia","SolomonIslands","Somalia","SouthAfrica","SouthSudan","Spain","SriLanka","Sudan","Suriname","Sweden","Switzerland","SyrianArabRepublic","Taiwan","Tajikistan","Tanzania","Thailand","Timor_Leste","Togo","Tonga","TrinidadandTobago","Tunisia","Turkey","Turkmenistan","Uganda","Ukraine","UnitedArabEmirates","UnitedKingdom","UnitedStatesofAmerica","Uruguay","Uzbekistan","Vanuatu","Venezuela","VietNam","Yemen","Zambia","Zimbabwe"]
 
 export const COMPONENT_MAP = {
     "Albania": Albania,
     "Algeria": Algeria,
     "Andorra": Andorra,
     "Angola": Angola,
-    "AntiguaandBarbudaMap": AntiguaandBarbudaMap,
+    "AntiguaandBarbuda": AntiguaandBarbuda,
     "Argentina": Argentina,
     "Armenia": Armenia,
     "Australia": Australia,
@@ -220,7 +220,7 @@ export const COMPONENT_MAP = {
     "Bulgaria": Bulgaria,
     "BurkinaFaso": BurkinaFaso,
     "Burundi": Burundi,
-    "CaboVerdeMap": CaboVerdeMap,
+    "CaboVerde": CaboVerde,
     "Cambodia": Cambodia,
     "Cameroon": Cameroon,
     "Canada": Canada,
@@ -273,7 +273,7 @@ export const COMPONENT_MAP = {
     "Iran": Iran,
     "Iraq": Iraq,
     "Ireland": Ireland,
-    "Isreal": Isreal,
+    "Israel": Israel,
     "Italy": Italy,
     "IvoryCoast": IvoryCoast,
     "Jamaica": Jamaica,

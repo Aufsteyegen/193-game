@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useTimer } from 'react-timer-hook'
 import "./Timer.css"
 
-export default function Timer({ play, setPlay }) {
+export default function Timer({ play, setPlay, setIsPressed }) {
     const {
       seconds,
       restart,
-    } = useTimer({ expiryTimestamp: null, onExpire: () => setPlay(false) })
+    } = useTimer({ expiryTimestamp: null, onExpire: () => {setPlay(false), setIsPressed([false, false, false]) } })
     useEffect(() => {
       let expiryTimestamp = null
       if (play) {
