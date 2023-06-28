@@ -20,7 +20,7 @@ export default function R3F({ play, setPlay, slot1, slot2, slot3 }) {
                         {COMPONENT_MAP[slot3]({ 
                          scale: 4,
                          position: [4.5, 0, 0], 
-                         rotation: [Math.PI / 2, Math.PI, Math.PI]})}
+                         rotation: [Math.PI / 2, 0, 0]})}
                     </Float>
                     </Suspense>
                     <Suspense fallback={null}>
@@ -28,7 +28,7 @@ export default function R3F({ play, setPlay, slot1, slot2, slot3 }) {
                         {COMPONENT_MAP[slot1]({ 
                          scale: 4,
                          position: [-4.5, 0, 0], 
-                         rotation: [Math.PI / 2, Math.PI, Math.PI]})}
+                         rotation: [Math.PI / 2, 0, 0]})}
                     </Float>
                     </Suspense>
                     <Suspense fallback={null}>
@@ -36,7 +36,7 @@ export default function R3F({ play, setPlay, slot1, slot2, slot3 }) {
                         {COMPONENT_MAP[slot2]({
                          scale: 4, 
                          position: [0, 0, 0], 
-                         rotation: [Math.PI / 2, Math.PI, Math.PI]})}
+                         rotation: [Math.PI / 2, 0, 0]})}
                     </Float>
                     </Suspense>
                 </Stage>

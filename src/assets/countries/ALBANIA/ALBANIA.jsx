@@ -16,7 +16,6 @@ export function Albania(props) {
               metalness={0.25}
               color={'black'}
             /></mesh>
-
       </group>
     )
 }

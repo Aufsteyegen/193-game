@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { shuffleArray } from "/src/utils/shuffleLogic"
 import { COUNTRIES, COMPONENT_MAP } from "/src/utils/constants.js"
 import R3F from "../R3F/R3F"
@@ -16,60 +16,78 @@ function chooseIndex() {
 export default function GameLogic({ play, setPlay, isPressed, setIsPressed,
                                     correctGuess, setCorrectGuess,
                                     slot1, setSlot1, slot2, setSlot2,
-                                    slot3, setSlot3 }) {
+                                    slot3, setSlot3, solved, setSolved,
+                                    streak, setStreak }) {
     const [countries, setCountries] = useState(COUNTRIES.slice())
     // shuffle countries on page load
+    const resetGuesses = useCallback((firstSlot = false, secondSlot = false) => {
+        setTimeout(() => {
+          if (firstSlot) setSlot1(countries[chooseIndex()])
+          else if (secondSlot) setSlot2(countries[chooseIndex()])
+          else setSlot3(countries[chooseIndex()])
+          setCorrectGuess(chooseSlot())
+          let resetState = [...isPressed]
+          resetState = [false, false, false]
+          setIsPressed(resetState)
+          setSolved(false)
+        }, 600)
+    }, [countries, setSlot1, setSlot2, setSlot3, setCorrectGuess, isPressed, setIsPressed, setSolved])
     useEffect(() => {
         shuffleArray(countries)
         setCorrectGuess(chooseSlot())
         setSlot1(countries[0])
         setSlot2(countries[1])
         setSlot3(countries[2])
-    }, [play, countries])
+    }, [play, countries, setCorrectGuess, setSlot1, setSlot2, setSlot3])
+    useEffect(() => {
+        if (isPressed.filter(value => value === true).length == 2) {
+            setSolved(true)
+            resetGuesses()
+        }
+    }, [isPressed, resetGuesses, setSolved, setStreak])
     useEffect(() => {
         function handleKeyDown(e) {
-            if (play && (e.keyCode === 49 || e.keyCode === 65)) {
-                const newState = [...isPressed]
-                newState[0] = true
-                setIsPressed(newState)
-                if (correctGuess == 0) {
-                    setSlot1(countries[chooseIndex()])
-                    setCorrectGuess(chooseSlot())
-                    let resetState = [...isPressed]
-                    resetState = [false, false, false]
-                    setIsPressed(resetState)
-                }
+          if (play && (e.keyCode === 49 || e.keyCode === 65)) {
+            const newState = [...isPressed]
+            newState[0] = true
+            setIsPressed(newState)
+            if (correctGuess === 0) {
+              setSolved(true)
+              const newStreak = streak + 1
+              setStreak(newStreak)
+              resetGuesses(true, false)
             }
-            else if (play && (e.keyCode === 50 || e.keyCode === 83)) {
-                const newState = [...isPressed]
-                newState[1] = true
-                setIsPressed(newState)
-                if (correctGuess == 1) {
-                    setSlot2(countries[chooseIndex()])
-                    setCorrectGuess(chooseSlot())
-                    let resetState = [...isPressed]
-                    resetState = [false, false, false]
-                    setIsPressed(resetState)
-                }
+            else setStreak(0)
+          } else if (play && (e.keyCode === 50 || e.keyCode === 83)) {
+            const newState = [...isPressed]
+            newState[1] = true
+            setIsPressed(newState)
+            if (correctGuess === 1) {
+              setSolved(true)
+              const newStreak = streak + 1
+              setStreak(newStreak)
+              resetGuesses(false, true)
             }
-            else if (play && (e.keyCode === 51 || e.keyCode === 68)) {
-                const newState = [...isPressed]
-                newState[2] = true
-                setIsPressed(newState)
-                if (correctGuess != 0 && correctGuess != 1) {
-                    setSlot3(countries[chooseIndex()])
-                    setCorrectGuess(chooseSlot())
-                    let resetState = [...isPressed]
-                    resetState = [false, false, false]
-                    setIsPressed(resetState)
-                }
+            else setStreak(0)
+          } else if (play && (e.keyCode === 51 || e.keyCode === 68)) {
+            const newState = [...isPressed]
+            newState[2] = true
+            setIsPressed(newState)
+            if (correctGuess !== 0 && correctGuess !== 1) {
+              setSolved(true)
+              const newStreak = streak + 1
+              setStreak(newStreak)
+              resetGuesses(false, false)
             }
+            else setStreak(0)
+          }
         }
-        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keydown', handleKeyDown)
         return function cleanup() {
-            document.removeEventListener('keydown', handleKeyDown);
+          document.removeEventListener('keydown', handleKeyDown)
         }
-    })
+      }, [countries, isPressed, play, correctGuess, resetGuesses, setIsPressed, setSolved])
+      
     return (
         <R3F play={play} setPlay={setPlay} slot1={slot1} slot2={slot2} slot3={slot3} />
     )

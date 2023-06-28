@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 
 export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
                                       slot1, slot2, slot3 }) {
+    
     return (
       <div>
         <div className={`loading-background ${!play ? 'fade-in' : 'fade-out'}`}>
@@ -45,6 +46,11 @@ export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
                     <div><i className={`bx bx-x ${(isPressed[0] &&  correctGuess != 0)? ' show' : ' hide'}`}></i></div>
                     <div><i className={`bx bx-x ${(isPressed[1] &&  correctGuess != 1)? ' show' : ' hide'}`}></i></div>
                     <div><i className={`bx bx-x ${(isPressed[2] &&  correctGuess != 2)? ' show' : ' hide'}`}></i></div>
+                </div>
+                <div className="slot-status-icons-2">
+                    <div><i className={`bx bx-check ${(isPressed[0] &&  correctGuess == 0)? ' show' : ' hide'}`}></i></div>
+                    <div><i className={`bx bx-check ${(isPressed[1] &&  correctGuess == 1)? ' show' : ' hide'}`}></i></div>
+                    <div><i className={`bx bx-check ${(isPressed[2] &&  correctGuess == 2)? ' show' : ' hide'}`}></i></div>
                 </div>
             </div>
         )}

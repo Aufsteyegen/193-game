@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useTimer } from 'react-timer-hook'
 import "./Timer.css"
 
-export default function Timer({ play, setPlay, setIsPressed }) {
+export default function Timer({ play, setPlay, setIsPressed, setStreak,
+                                correctGuess }) {
     const {
       seconds,
       restart,
-    } = useTimer({ expiryTimestamp: null, onExpire: () => {setPlay(false), setIsPressed([false, false, false]) } })
+      addTime
+    } = useTimer({ expiryTimestamp: null, onExpire: () => {setPlay(false), setIsPressed([false, false, false]), setStreak(0) } })
     useEffect(() => {
       let expiryTimestamp = null
       if (play) {
@@ -15,5 +17,8 @@ export default function Timer({ play, setPlay, setIsPressed }) {
       }
       restart(expiryTimestamp)
     }, [play, restart])
-    return <div className="timer" style={{ color: seconds <= 15 ? 'red' : 'black' }}><span>{play ? seconds : "—"}</span> {play ? "seconds left" : ""}</div>
+    
+    
+    return <div className="timer" style={{ color: seconds <= 15 ? 'red' : 'black' }}><span>{(play && seconds != 0) ? seconds : "Go!"}</span> {
+        (play && seconds > 1) ? "seconds left" : seconds == 1 ? "second left!" : ""}</div>
 }

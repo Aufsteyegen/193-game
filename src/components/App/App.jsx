@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import Timer from "../Timer/Timer"
+import Stats from "../Stats/Stats"
 import GameLogic from "../GameLogic/GameLogic"
 import GameOverlay from "../GameOverlay/GameOverlay"
 import NavBar from "../Navbar/Navbar"
@@ -14,6 +15,8 @@ export default function App() {
     const [slot1, setSlot1] = useState(null)
     const [slot2, setSlot2] = useState(null)
     const [slot3, setSlot3] = useState(null)
+    const [solved, setSolved] = useState(false)
+    const [streak, setStreak] = useState(0)
     useEffect(() => {
         function handleKeyDown(e) {
           if (!play && e.keyCode === 49) {
@@ -28,7 +31,9 @@ export default function App() {
         <div className="app">
             <NavBar />
             <main>
-                <Timer play={play} setPlay={setPlay} setIsPressed={setIsPressed} />
+                <Timer play={play} setPlay={setPlay} setIsPressed={setIsPressed} setStreak={setStreak}
+                       correctGuess={correctGuess} />
+                <Stats streak={streak} play={play} />
                 <div className="home-styling"></div>
                 <GameOverlay play={play} setPlay={setPlay} isPressed={isPressed}
                                setIsPressed={setIsPressed} correctGuess={correctGuess}
@@ -37,7 +42,9 @@ export default function App() {
                            isPressed={isPressed} setIsPressed={setIsPressed}
                            correctGuess={correctGuess} setCorrectGuess={setCorrectGuess}
                            slot1={slot1} setSlot1={setSlot1} slot2={slot2} setSlot2={setSlot2}
-                           slot3={slot3} setSlot3={setSlot3} />
+                           slot3={slot3} setSlot3={setSlot3}
+                           solved={solved} setSolved={setSolved}
+                           streak={streak} setStreak={setStreak} />
             </main>
             <Footer />
         </div>
