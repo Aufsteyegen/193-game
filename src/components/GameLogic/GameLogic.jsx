@@ -48,7 +48,7 @@ export default function GameLogic({ play, setPlay,
         const initialSlot1Answers = countries.slice(0, 50)
         const initialSlot2Answers = countries.slice(51, 101)
         const initialSlot3Answers = countries.slice(102, 152)
-        const initialSlot4Answers = countries.slice(153, 193)
+        const initialSlot4Answers = countries.slice(153, 192)
       
         setSlot1Answers(initialSlot1Answers)
         setSlot2Answers(initialSlot2Answers)
