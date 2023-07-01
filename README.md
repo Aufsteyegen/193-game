@@ -6,6 +6,8 @@ A React-three-fiber based webgame to challenge your geography knowledge! Choose 
 
 A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds.
 
+193 countries are featured in total. If you believe a correction should be made, please reach out!
+
 ## Controls
 
 - Press the ``play`` button or the ``1`` key to start. 
