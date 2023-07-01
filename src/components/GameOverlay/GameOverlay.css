@@ -142,12 +142,12 @@ button {
 
 .bx-x {
     background-color: rgb(205, 0, 0);
-    border-radius: 5px;
+    border-radius: 100px;
 }
 
 .bx-check {
     background-color: rgb(5, 193, 5);
-    border-radius: 5px;
+    border-radius: 100px;
 }
 
 .flag-display {

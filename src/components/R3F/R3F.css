@@ -1,6 +1,6 @@
 .canvas-container {
     display: flex;
-    width: 70vw;
+    width: 100vw;
     height: 100vh;
     background-color: hsla(0, 0%, 98%, 0.854);
 }

@@ -16,6 +16,8 @@ import { Belarus } from '/src/assets/countries/Belarus/Belarus'
 import { NorthMacedonia } from '/src/assets/countries/NorthMacedonia/NorthMacedonia'
 import { Guyana } from '/src/assets/countries/Guyana/Guyana'
 import { Sweden } from '/src/assets/countries/Sweden/Sweden'
+import { VaticanCity } from '/src/assets/countries/VaticanCity/VaticanCity'
+import { RepublicoftheCongo } from '/src/assets/countries/RepublicoftheCongo/RepublicoftheCongo'
 import { Norway } from '/src/assets/countries/Norway/Norway'
 import { Tanzania } from '/src/assets/countries/Tanzania/Tanzania'
 import { Luxembourg } from '/src/assets/countries/Luxembourg/Luxembourg'
@@ -190,7 +192,7 @@ import { DominicanRepublic } from '/src/assets/countries/DominicanRepublic/Domin
 import { Paraguay } from '/src/assets/countries/Paraguay/Paraguay'
 import { GuineaBissau } from '/src/assets/countries/GuineaBissau/GuineaBissau'
 
-export const COUNTRIES = ["Albania","Algeria","Andorra","Angola","AntiguaandBarbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","BosniaandHerzegovina","Botswana","Brazil","Brunei","Bulgaria","BurkinaFaso","Burundi","CaboVerde","Cambodia","Cameroon","Canada","CentralAfricanRepublic","Chad","Chile","China","Colombia","Comoros","Congo","CostaRica","Croatia","Cuba","Cyprus","CzechRepublic","DemocraticPeoplesRepublicofKorea","Denmark","Djibouti","Dominica","DominicanRepublic","Ecuador","Egypt","ElSalvador","EquatorialGuinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","GuineaBissau","Guyana","Haiti","Honduras","HongKong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","IvoryCoast","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","LaoPeoplesDemocraticRepublic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Madagascar","Malawi","Malaysia","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","NewZealand","Nicaragua","Niger","Nigeria","NorthMacedonia","Norway","Oman","Pakistan","Palau","Panama","PapuaNewGuinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","RepublicofKorea","Romania","RussianFederation","Rwanda","SaintKittsandNevis","SaintLucia","SaintVincentandtheGrenadines","Samoa","SanMarino","SaoTomeandPrincipe","SaudiArabia","Senegal","Serbia","Seychelles","SierraLeone","Singapore","Slovakia","Slovenia","SolomonIslands","Somalia","SouthAfrica","SouthSudan","Spain","SriLanka","Sudan","Suriname","Sweden","Switzerland","SyrianArabRepublic","Taiwan","Tajikistan","Tanzania","Thailand","Timor_Leste","Togo","Tonga","TrinidadandTobago","Tunisia","Turkey","Turkmenistan","Uganda","Ukraine","UnitedArabEmirates","UnitedKingdom","UnitedStatesofAmerica","Uruguay","Uzbekistan","Vanuatu","Venezuela","VietNam","Yemen","Zambia","Zimbabwe"]
+export const COUNTRIES = ["Albania","Algeria","Andorra","Angola","AntiguaandBarbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","BosniaandHerzegovina","Botswana","Brazil","Brunei","Bulgaria","BurkinaFaso","Burundi","CaboVerde","Cambodia","Cameroon","Canada","CentralAfricanRepublic","Chad","Chile","China","Colombia","Comoros","Congo","CostaRica","Croatia","Cuba","Cyprus","CzechRepublic","DemocraticPeoplesRepublicofKorea","Denmark","Djibouti","Dominica","DominicanRepublic","Ecuador","Egypt","ElSalvador","EquatorialGuinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","GuineaBissau","Guyana","Haiti","Honduras","HongKong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","IvoryCoast","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","LaoPeoplesDemocraticRepublic","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Madagascar","Malawi","Malaysia","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","NewZealand","Nicaragua","Niger","Nigeria","NorthMacedonia","Norway","Oman","Pakistan","Palau","Panama","PapuaNewGuinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","RepublicofKorea", "RepublicoftheCongo", "Romania","RussianFederation","Rwanda","SaintKittsandNevis","SaintLucia","SaintVincentandtheGrenadines","Samoa","SanMarino","SaoTomeandPrincipe","SaudiArabia","Senegal","Serbia","Seychelles","SierraLeone","Singapore","Slovakia","Slovenia","SolomonIslands","Somalia","SouthAfrica","SouthSudan","Spain","SriLanka","Sudan","Suriname","Sweden","Switzerland","SyrianArabRepublic","Taiwan","Tajikistan","Tanzania","Thailand","Timor_Leste","Togo","Tonga","TrinidadandTobago","Tunisia","Turkey","Turkmenistan","Uganda","Ukraine","UnitedArabEmirates","UnitedKingdom","UnitedStatesofAmerica","Uruguay","Uzbekistan","Vanuatu","VaticanCity", "Venezuela","VietNam","Yemen","Zambia","Zimbabwe"]
 
 export const COMPONENT_MAP = {
     "Albania": Albania,
@@ -332,6 +334,7 @@ export const COMPONENT_MAP = {
     "Portugal": Portugal,
     "Qatar": Qatar,
     "RepublicofKorea": RepublicofKorea,
+    "RepublicoftheCongo": RepublicoftheCongo,
     "Romania": Romania,
     "RussianFederation": RussianFederation,
     "Rwanda": Rwanda,
@@ -379,6 +382,7 @@ export const COMPONENT_MAP = {
     "Uruguay": Uruguay,
     "Uzbekistan": Uzbekistan,
     "Vanuatu": Vanuatu,
+    "VaticanCity": VaticanCity,
     "Venezuela": Venezuela,
     "VietNam": VietNam,
     "Yemen": Yemen,

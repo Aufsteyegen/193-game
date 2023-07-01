@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Stats.css" 
 
-export default function Stats({ streak, play }) {
+export default function Stats({ streak, play, increaseStreak }) {
     const [isStreakChanged, setIsStreakChanged] = useState(false)
     useEffect(() => {
         setIsStreakChanged(true)
@@ -12,6 +12,7 @@ export default function Stats({ streak, play }) {
 
 return (
     <div className="stat-icons">
+        {increaseStreak && <span className="timer-increase">+5 </span>}
         <div className={`${streak >= 1 ? ' show-streak' : !play ? ' hidden' : ' hide-streak'}${isStreakChanged ? ' changed' : ''}`}>Streak: {streak}</div>
     </div>
 )
