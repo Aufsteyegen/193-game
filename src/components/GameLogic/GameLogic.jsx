@@ -113,19 +113,20 @@ export default function GameLogic({ play, setPlay,
           }
           setTimeout(() => {
             if (correctGuess === 1) {
-              const newSlot1Idx = slot1Idx + 1
+              const newSlot1Idx = slot1Idx == 49 ? 0 : slot1Idx + 1
               setSlot1Idx(newSlot1Idx)
               setSlot1(slot1Answers[newSlot1Idx])
             } else if (correctGuess === 2) {
-              const newSlot2Idx = slot2Idx + 1
+              const newSlot2Idx = slot2Idx == 49 ? 0 : slot2Idx + 1
               setSlot2Idx(newSlot2Idx)
               setSlot2(slot2Answers[newSlot2Idx])
             } else if (correctGuess === 3) {
-              const newSlot3Idx = slot3Idx + 1
+              const newSlot3Idx = slot3Idx == 49 ? 0 : slot3Idx + 1
               setSlot3Idx(newSlot3Idx)
               setSlot3(slot3Answers[newSlot3Idx])
             } else if (correctGuess === 4) {
-              const newSlot4Idx = slot4Idx + 1
+              console.log(slot4, slot4Idx)
+              const newSlot4Idx = slot4Idx == 38 ? 0 : slot4Idx + 1
               setSlot4Idx(newSlot4Idx)
               setSlot4(slot4Answers[newSlot4Idx])
             }

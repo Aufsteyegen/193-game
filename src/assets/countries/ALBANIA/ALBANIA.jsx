@@ -14,7 +14,7 @@ export function Albania(props) {
           <meshStandardMaterial
               roughness={0.10}
               metalness={0.25}
-              color={'black'}
+              color={'silver'}
             /></mesh>
       </group>
     )
