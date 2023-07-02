@@ -10,7 +10,7 @@ export function Malawi(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Malawi/Malawi.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.032']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.032']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

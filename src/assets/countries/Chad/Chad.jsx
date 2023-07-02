@@ -10,7 +10,7 @@ export function Chad(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Chad/Chad.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.045']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.045']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

@@ -10,7 +10,7 @@ export function NorthMacedonia(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/NorthMacedonia/NorthMacedonia.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.023']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.023']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

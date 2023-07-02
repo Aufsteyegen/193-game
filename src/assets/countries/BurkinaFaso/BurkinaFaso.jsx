@@ -10,7 +10,7 @@ export function BurkinaFaso(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/BurkinaFaso/BurkinaFaso.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.038']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.038']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

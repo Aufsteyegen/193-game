@@ -10,7 +10,7 @@ export function Iraq(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Iraq/Iraq.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.007']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.007']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

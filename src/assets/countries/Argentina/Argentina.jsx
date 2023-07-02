@@ -10,11 +10,11 @@ export function Argentina(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Argentina/Argentina.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve001.geometry} material={materials.SVGMat} />
-      <mesh geometry={nodes.Curve002.geometry} material={materials.SVGMat} />
-      <mesh geometry={nodes.Curve003.geometry} material={materials.SVGMat} />
-      <mesh geometry={nodes.Curve004.geometry} material={materials.SVGMat} />
-      <mesh geometry={nodes.Curve005.geometry} material={materials.SVGMat} />
+      <mesh geometry={nodes.Curve001.geometry} material={materials.SVGMat} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve002.geometry} material={materials.SVGMat} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve003.geometry} material={materials.SVGMat} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve004.geometry} material={materials.SVGMat} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve005.geometry} material={materials.SVGMat} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

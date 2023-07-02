@@ -10,7 +10,7 @@ export function Luxembourg(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Luxembourg/Luxembourg.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.029']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.029']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

@@ -10,7 +10,7 @@ export function Georgia(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Georgia/Georgia.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.027']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.027']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

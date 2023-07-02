@@ -15,8 +15,7 @@ export function VaticanCity(props) {
         castShadow
         receiveShadow
         geometry={nodes.Curve.geometry}
-        material={materials["SVGMat.020"]}
-      />
+        material={materials["SVGMat.020"]} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   );
 }

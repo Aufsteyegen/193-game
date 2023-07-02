@@ -10,14 +10,14 @@ export function NewZealand(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/NewZealand/NewZealand.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve003.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve004.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve005.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve006.geometry} material={materials['SVGMat.018']} />
-      <mesh geometry={nodes.Curve007.geometry} material={materials['SVGMat.018']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve003.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve004.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve005.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve006.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve007.geometry} material={materials['SVGMat.018']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

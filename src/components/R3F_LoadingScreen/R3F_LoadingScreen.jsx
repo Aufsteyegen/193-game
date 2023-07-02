@@ -14,7 +14,7 @@ export default function R3F_LoadingScreen ({ play }) {
                 <meshStandardMaterial 
                     roughness={0.10}
                     metalness={0.25}
-                    color="blue"/>
+                    color="white"/>
             </Text3D>
             </Float>
             <Float rotationIntensity={2}>
@@ -23,7 +23,7 @@ export default function R3F_LoadingScreen ({ play }) {
                 <meshStandardMaterial 
                     roughness={0.10}
                     metalness={0.25}
-                    color="blue"/>
+                    color="white"/>
             </Text3D>
             </Float>
             <Float rotationIntensity={2}>
@@ -32,7 +32,7 @@ export default function R3F_LoadingScreen ({ play }) {
                 <meshStandardMaterial 
                     roughness={0.10}
                     metalness={0.25}
-                    color="blue"/>
+                    color="white"/>
             </Text3D>
             </Float>
             </Center>

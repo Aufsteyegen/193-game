@@ -10,9 +10,9 @@ export function Nigeria(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Nigeria/Nigeria.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.020']} />
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.020']} />
-      <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.020']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.020']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.020']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.020']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

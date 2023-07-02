@@ -41,8 +41,9 @@ export default function App() {
                            solved={solved} setSolved={setSolved}
                            streak={streak} setStreak={setStreak}
                            increaseStreak={increaseStreak} setIncreaseStreak={setIncreaseStreak} />
+                <Footer play={play}/>
             </main>
-            <Footer />
+            
         </div>
     )
 }

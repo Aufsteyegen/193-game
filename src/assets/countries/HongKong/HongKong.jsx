@@ -10,7 +10,7 @@ export function HongKong(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/HongKong/HongKong.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.001']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.001']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

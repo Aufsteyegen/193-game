@@ -9,15 +9,14 @@ import "./R3F.css"
 export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
     return (
         <div className="canvas-container">
-            <Canvas >
-            
-                <spotLight position={[0, 17, 5]} intensity={5} penumbra={1} angle={0.60} color="white" />
+            <Canvas>
+                <spotLight position={[0, 15, 5]} intensity={10} penumbra={1} angle={0.60} color="#0c8cbf" />
                 <R3F_LoadingScreen play={play} />
                 {(play) && (
                     <>
-                    <Backdrop floor={2} position={[0, -6, 0]} scale={[50, 16, 2]}>
-                        <meshStandardMaterial color="rgb(130, 130, 130)"  roughness={0.35}
-                                            metalness={0.15}/>
+                    <Backdrop floor={2} position={[0, -7, 0]} scale={[50, 18, 2]}>
+                        <meshStandardMaterial color="#353540" envMapIntensity={0.1}
+                        roughness={0.95} metalness={0.95} />
                     </Backdrop>
                 <Stage adjustCamera environment="park" shadows>
                 <Suspense fallback={null}>

@@ -10,8 +10,8 @@ export function Tajikistan(props) {
   const { nodes, materials } = useGLTF('src/assets/countries/Tajikistan/Tajikistan.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} />
-      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.002']} />
+      <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
+      <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.002']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   )
 }

@@ -4,10 +4,10 @@ import "./Timer.css"
 export default function Timer({ play, setPlay, setIsPressed, setStreak, 
                                 increaseStreak, setIncreaseStreak }) {
     const [seconds, setSeconds] = useState(60)
-  
+    const [pageLoadMessage, setPageLoadMessage] = useState(false)
     useEffect(() => {
       let intervalId = null
-  
+      if (pageLoadMessage) setPageLoadMessage(false)
       if (play && seconds > 0 && seconds <= 60) {
         intervalId = setInterval(() => {
           setSeconds((prevSeconds) => prevSeconds - 1)
@@ -38,8 +38,12 @@ export default function Timer({ play, setPlay, setIsPressed, setStreak,
         setSeconds(60)
       }
     }, [seconds, setPlay, setIsPressed, setStreak])
-    return <div className="timer" style={{ color: seconds <= 15 ? 'red' : 'black' }}>
-           <span>{(play && seconds != 0) ? seconds : "Time's up!"}</span> {
+
+    useEffect(() => {
+        setPageLoadMessage(true)
+    }, [])
+    return <div className="timer" style={{ color: seconds <= 15 ? 'red' : 'white' }}>
+           <span>{(play && seconds != 0) ? seconds : (!play && !pageLoadMessage) ? "Time's up!": "Ready?"}</span> {
                   (play && seconds > 1) ? "seconds left" : seconds == 1 ? "second left!" : ""}
             </div>
 }

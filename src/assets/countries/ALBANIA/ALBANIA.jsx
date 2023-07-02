@@ -10,12 +10,7 @@ export function Albania(props) {
     const { nodes, materials } = useGLTF('src/assets/countries/Albania/ALBANIA.glb')
     return (
       <group {...props} dispose={null}>
-          <mesh geometry={nodes.Curve.geometry} material={materials.SVGMat}>
-          <meshStandardMaterial
-              roughness={0.10}
-              metalness={0.25}
-              color={'silver'}
-            /></mesh>
+          <mesh geometry={nodes.Curve.geometry} material={materials.SVGMat}material-roughness={0.10} material-metalness={0.80} material-color="grey"/>
       </group>
     )
 }

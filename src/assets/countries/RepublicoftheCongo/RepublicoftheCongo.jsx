@@ -14,8 +14,7 @@ export function RepublicoftheCongo(props) {
         castShadow
         receiveShadow
         geometry={nodes.Curve.geometry}
-        material={materials["SVGMat.007"]}
-      />
+        material={materials["SVGMat.007"]} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
     </group>
   );
 }
