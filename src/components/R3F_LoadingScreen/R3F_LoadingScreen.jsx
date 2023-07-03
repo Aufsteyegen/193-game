@@ -9,7 +9,7 @@ export default function R3F_LoadingScreen ({ play }) {
             <Center>
             <Environment preset="dawn" />
             <Float rotationIntensity={2}>
-            <Text3D letterSpacing={-0.06} size={2} position={[-3, 0, 0]} font="../Rajdhani_Bold.json">
+            <Text3D letterSpacing={-0.1} size={5} position={[-5, 0, 0]} font="../Rajdhani_Bold.json">
                 1
                 <meshStandardMaterial 
                     roughness={0.10}
@@ -18,7 +18,7 @@ export default function R3F_LoadingScreen ({ play }) {
             </Text3D>
             </Float>
             <Float rotationIntensity={2}>
-            <Text3D letterSpacing={-0.06} size={2} position={[0, 0, 0]} font="../Rajdhani_Bold.json">
+            <Text3D letterSpacing={-0.1} size={5} position={[0, 0, 0]} font="../Rajdhani_Bold.json">
                 9
                 <meshStandardMaterial 
                     roughness={0.10}
@@ -27,7 +27,7 @@ export default function R3F_LoadingScreen ({ play }) {
             </Text3D>
             </Float>
             <Float rotationIntensity={2}>
-            <Text3D letterSpacing={-0.06} size={2} position={[3, 0, 0]} font="../Rajdhani_Bold.json">
+            <Text3D letterSpacing={-0.1} size={5} position={[5, 0, 0]} font="../Rajdhani_Bold.json">
                 3
                 <meshStandardMaterial 
                     roughness={0.10}

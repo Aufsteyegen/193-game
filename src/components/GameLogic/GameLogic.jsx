@@ -15,7 +15,9 @@ export default function GameLogic({ play, setPlay,
                                     isPressed, setIsPressed,
                                     correctGuess, setCorrectGuess, 
                                     solved, setSolved,
-                                    setStreak, setIncreaseStreak }) {
+                                    setStreak, setIncreaseStreak,
+                                    totalGuesses, setTotalGuesses,
+                                    correctGuesses, setCorrectGuesses }) {
 
     // copy the imported array of country names
     const [countries, setCountries] = useState(COUNTRIES.slice())
@@ -71,29 +73,41 @@ export default function GameLogic({ play, setPlay,
             return
           }
           let pressed = [...isPressed]
-          if (play && (e.key === '1' || e.keyCode === 'A')) {
+          if (play && e.key === '1' || e.key === '2' || e.key === '3' || e.key ==='4') {
+            let newTotalGuesses = totalGuesses + 1
+            setTotalGuesses(newTotalGuesses)
+          }
+          if (play && (e.key === '1')) {
             pressed[0] = true
             setIsPressed(pressed)
             if (correctGuess == 1) {
                 setSolved(true)
+                let newCorrectGuesses = correctGuesses + 1
+                setCorrectGuesses(newCorrectGuesses)
             }
-          } else if (play && (e.key === '2' || e.keyCode === 'S')) {
+          } else if (play && (e.key === '2')) {
             pressed[1] = true
             setIsPressed(pressed)
             if (correctGuess == 2) {
                 setSolved(true)
+                let newCorrectGuesses = correctGuesses + 1
+                setCorrectGuesses(newCorrectGuesses)
             }
-          } else if (play && (e.key === '3' || e.keyCode === 'D')) {
+          } else if (play && (e.key === '3')) {
             pressed[2] = true
             setIsPressed(pressed)
             if (correctGuess == 3) {
                 setSolved(true)
+                let newCorrectGuesses = correctGuesses + 1
+                setCorrectGuesses(newCorrectGuesses)
             }
-          } else if (play && (e.key === '4' || e.keyCode === 'F')) {
+          } else if (play && (e.key === '4')) {
             pressed[3] = true
             setIsPressed(pressed)
             if (correctGuess === 4) {
                 setSolved(true)
+                let newCorrectGuesses = correctGuesses + 1
+                setCorrectGuesses(newCorrectGuesses)
             }
         }
         }

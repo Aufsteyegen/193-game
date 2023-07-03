@@ -11,7 +11,7 @@ A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the corre
 ## Controls
 
 - Press the ``play`` button or the ``1`` key to start. 
-- Press the ``1`` key or the ``'A'`` key to pick the first (i.e., leftmost) country. To select the neighboring country to the right of the first one, press the "2" key or the "S" key. Keys ``3`` and ``D`` will select the third country, and keys ``4`` and ``F`` will select the fourth.
+- Press the ``1`` key to pick the first (i.e., leftmost) country. To select the neighboring country to the right of the first one, press the ``2`` key, and so on.
 
 ## Attributions
 

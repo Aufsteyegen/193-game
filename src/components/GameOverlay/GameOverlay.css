@@ -87,12 +87,12 @@ i.bx.bx-play {
 
 .fade-in {
     opacity: 1;
-    transition: opacity 0.15s ease-in;
+    transition: opacity 0.5s ease-in;
 }
   
 .fade-out {
     opacity: 0;
-    transition: opacity 0.15s ease-out;
+    transition: opacity 0.5s ease-out;
 }
 
 @keyframes fadeIn {
@@ -202,12 +202,12 @@ i.bx.bx-play {
 
 .show {
     opacity: 1;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.15s ease;
 }
 
 .hide {
     opacity: 0;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.15s ease;
 }
 
 .slot-status-icons {

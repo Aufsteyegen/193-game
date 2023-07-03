@@ -9,7 +9,7 @@ import "./R3F.css"
 export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
     return (
         <div className="canvas-container">
-            <Canvas>
+            <Canvas camera={{ position: [0, -1, 25], fov: 35 }}>
                 <spotLight position={[0, 15, 5]} intensity={10} penumbra={1} angle={0.60} color="#0c8cbf" />
                 <R3F_LoadingScreen play={play} />
                 {(play) && (
@@ -18,7 +18,7 @@ export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
                         <meshStandardMaterial color="#353540" envMapIntensity={0.1}
                         roughness={0.95} metalness={0.95} />
                     </Backdrop>
-                <Stage adjustCamera environment="park" shadows>
+                <Stage adjustCamera={false} environment="park" shadows>
                 <Suspense fallback={null}>
                     <Float rotationIntensity={0.1} speed={5.4} range={[0, 0]}>
                         {COMPONENT_MAP[slot1]({ 
