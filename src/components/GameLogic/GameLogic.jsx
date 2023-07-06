@@ -17,7 +17,8 @@ export default function GameLogic({ play, setPlay,
                                     solved, setSolved,
                                     setStreak, setIncreaseStreak,
                                     totalGuesses, setTotalGuesses,
-                                    correctGuesses, setCorrectGuesses }) {
+                                    correctGuesses, setCorrectGuesses,
+                                    showLogin, showSignup }) {
 
     // copy the imported array of country names
     const [countries, setCountries] = useState(COUNTRIES.slice())
@@ -70,7 +71,7 @@ export default function GameLogic({ play, setPlay,
     useEffect(() => {
         function handleKeyDown(e) {
           if (isPressed.filter(value => value === true).length === 3 || solved) {
-            return
+                return
           }
           let pressed = [...isPressed]
           if (play && e.key === '1' || e.key === '2' || e.key === '3' || e.key ==='4') {

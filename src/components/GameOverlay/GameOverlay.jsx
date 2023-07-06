@@ -41,13 +41,12 @@ function addSpaces(name) {
 }
 
 export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
-                                      slot1, slot2, slot3, slot4 }) {
-    
+                                      slot1, slot2, slot3, slot4 }) {                             
+
     return (
       <div className="game-overlay">
         <div className={`loading-background ${!play ? 'fade-in' : 'fade-out'}`}>
-        <button onClick={() => setPlay(prevPlay => !prevPlay)} className={`${play ? 'hidden' : ''}`}>
-
+        <button onClick={() => {setPlay(!play)}} className={play ? 'hidden' : ''}>
           <i className="bx bx-play" title="Play button"></i>
         </button>
         <div className="loading-message">

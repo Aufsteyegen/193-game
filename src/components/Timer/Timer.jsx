@@ -4,9 +4,8 @@ import "./Timer.css"
 
 export default function Timer({ play, setPlay, setIsPressed, setStreak, 
                                 increaseStreak, setIncreaseStreak,
-                                latestWinTime, setLatestWinTime,
                                 timerSeconds, setTimerSeconds,
-                                won, setWon }) {
+                                won, setWon, streak, longestStreak, setLongestStreak }) {
     const [pageLoadMessage, setPageLoadMessage] = useState(false)
     const { seconds, minutes, start, pause, reset } = useStopwatch({ autoStart: false })
     useEffect(() => {
@@ -17,10 +16,6 @@ export default function Timer({ play, setPlay, setIsPressed, setStreak,
         }
         else {
             pause()
-            if (won) {
-                const formattedWinTime = `${minutes}:${String(seconds).padStart(2, '0')}`
-                setLatestWinTime(formattedWinTime)
-            }
         }
     }, [play])
     
@@ -41,6 +36,10 @@ export default function Timer({ play, setPlay, setIsPressed, setStreak,
 
     useEffect(() => {
       if (increaseStreak) {
+        if (streak > longestStreak) {
+            setLongestStreak(streak)
+            localStorage.setItem("longestStreak", String(longestStreak))
+        }
         setTimerSeconds((prevSeconds) => Math.min(prevSeconds + 5, 60))
         const delay = setTimeout(() => {
             setIncreaseStreak(false)
