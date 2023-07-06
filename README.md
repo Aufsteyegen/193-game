@@ -1,8 +1,9 @@
 # Notes about 193.github.io
----
+
 ## What is this?
 
-A React-three-fiber based webgame to challenge your geography knowledge! Choose the correct country outline from a set of four outlines based on a given flag. Get a streak of 193 to win.
+A React-three-fiber based webgame to challenge your geography knowledge! Given a 
+country flag, choose the correct country outline from a set of four outlines. Get a streak of 193 to win.
 
 A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
 
@@ -23,8 +24,6 @@ an account to save and load data on different devices.
 
 Country outlines (SVGs) were [adapted from Etsy](https://www.etsy.com/listing/1174609901/individual-world-countries-maps-svg) and converted to 3D models using Blender and ``gltfjsx``.
 
-Country flags were sourced from [Etsy as well](https://www.etsy.com/listing/1031888560/world-country-flags-svg-countries-flag?click_key=c3999de33423f70003e07de1ea496f59c391c6c5%3A1031888560&click_sum=78fbd197&ref=shop_home_feat_2&pro=1&sts=1).
+Country flags were also [sourced from Etsy](https://www.etsy.com/listing/1031888560/world-country-flags-svg-countries-flag?click_key=c3999de33423f70003e07de1ea496f59c391c6c5%3A1031888560&click_sum=78fbd197&ref=shop_home_feat_2&pro=1&sts=1).
 
----
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
