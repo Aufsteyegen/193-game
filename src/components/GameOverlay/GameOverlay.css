@@ -70,7 +70,7 @@ i.bx.bx-play {
     position: absolute;
     display: flex;
     justify-content: center;
-    width: 70vw;
+    width: 100%;
     z-index: 200;
     top: 50%;
     left: 50%;
@@ -121,7 +121,7 @@ i.bx.bx-play {
     width: 48px;
     height: 45px;
     background-color: white;
-    box-shadow: 0px 3px 0px 2px rgba(183, 183, 183, 0.8);
+    box-shadow: 0px 2px 0px 0.5px rgba(183, 183, 183, 0.8);
     border: 0.5px solid rgba(183, 183, 183, 0.8);;
     border-radius: 5px;
     text-align: center;
@@ -142,7 +142,9 @@ i.bx.bx-play {
 
 .key-icons {
     display: flex;
-    width: 57%;
+    width: 100%;
+    padding-left: 175px;
+    padding-right: 175px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
@@ -165,6 +167,19 @@ i.bx.bx-play {
     color: white;
 }
 
+.correct {
+    background-color: rgb(5, 193, 5);
+}
+
+.incorrect {
+    background-color: rgb(205, 0, 0);
+}
+
+.not-pressed {
+    background-color: white;
+    color: black;
+}
+
 .bx-x {
     background-color: rgb(205, 0, 0);
     border-radius: 100px;
@@ -173,6 +188,7 @@ i.bx.bx-play {
 .bx-check {
     background-color: rgb(5, 193, 5);
     border-radius: 100px;
+    border: 1px solid white;
 }
 
 .flag-display {
@@ -205,17 +221,19 @@ i.bx.bx-play {
 
 .show {
     opacity: 1;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.1s ease;
 }
 
 .hide {
     opacity: 0;
-    transition: opacity 0.15s ease;
+    transition: opacity 0.1s ease;
 }
 
 .slot-status-icons {
     display: flex;
-    width: 57%;
+    width: 100%;
+    padding-left: 175px;
+    padding-right: 175px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
@@ -224,7 +242,9 @@ i.bx.bx-play {
   
 .slot-status-icons-2 {
     display: flex;
-    width: 57%;
+    width: 100%;
+    padding-left: 175px;
+    padding-right: 175px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;

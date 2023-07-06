@@ -161,7 +161,9 @@ export default function GameLogic({ play, setPlay,
                                 slot1={slot1} slot2={slot2}
                                 slot3={slot3} slot4={slot4} />
             <R3F play={play} setPlay={setPlay} slot1={slot1} slot2={slot2}
-                                               slot3={slot3} slot4={slot4} />
+                                               slot3={slot3} slot4={slot4}
+                                               isPressed={isPressed}
+                                               correctGuess={correctGuess} />
         </>
     )
 }

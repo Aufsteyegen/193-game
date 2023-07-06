@@ -99,10 +99,10 @@ export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
                 <div className="gameplay-bottom">
                     <div className="key-message">Which country corresponds to the flag?</div>
                     <div className="key-icons">
-                        <div className={`key-icon${isPressed[0] ? ' pressed' : ''}${isPressed[0] ? ' down' : ' up'}`}>1</div>
-                        <div className={`key-icon${isPressed[1] ? ' pressed' : ''}${isPressed[1] ? ' down' : ' up'}`}>2</div>
-                        <div className={`key-icon${isPressed[2] ? ' pressed' : ''}${isPressed[2] ? ' down' : ' up'}`}>3</div>
-                        <div className={`key-icon${isPressed[3] ? ' pressed' : ''}${isPressed[3] ? ' down' : ' up'}`}>4</div>
+                    <div className={`key-icon${isPressed[0] &&  correctGuess != 1 ? ' pressed incorrect' : isPressed[0] &&  correctGuess == 1 ? ' pressed correct' : ' not-pressed'}${isPressed[0] ? ' down' : ' up'}`}>1</div>
+                        <div className={`key-icon${isPressed[1] &&  correctGuess != 2 ? ' pressed incorrect' : isPressed[1] &&  correctGuess == 2 ? ' pressed correct' : ' not-pressed'}${isPressed[1] ? ' down' : ' up'}`}>2</div>
+                        <div className={`key-icon${isPressed[2] &&  correctGuess != 3 ? ' pressed incorrect' : isPressed[2] &&  correctGuess == 3 ? ' pressed correct' : ' not-pressed'}${isPressed[2] ? ' down' : ' up'}`}>3</div>
+                        <div className={`key-icon${isPressed[3] &&  correctGuess != 4 ? ' pressed incorrect' : isPressed[3] &&  correctGuess == 4 ? ' pressed correct' : ' not-pressed'}${isPressed[3] ? ' down' : ' up'}`}>4</div>
                     </div>
                 </div>
             </div>

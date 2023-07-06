@@ -41,7 +41,7 @@ export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
                     <Float rotationIntensity={0.1} speed={5.3} range={[0, 0]}>
                         {COMPONENT_MAP[slot3]({ 
                             scale: 4,
-                            position: [0.5, 0, 0], 
+                            position: [0, 0, 0], 
                             rotation: [Math.PI / 2, 0, 0]
                         })}
                     </Float>

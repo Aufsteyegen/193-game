@@ -97,7 +97,7 @@ export default function Navbar({ wins, totalGuesses, correctGuesses, bestWinTime
                 <div>Accuracy: {totalGuesses > 0 ? ((correctGuesses / totalGuesses) * 100).toFixed(2) : 100}%</div>
             </div>
             <div className="data-sync">Data sync status: {!loggedIn ? "Not logged in" : updateStatus === "" || play ? "—" : updateStatus}</div>
-            {play && <div className="stop-button"><i class='bx bxs-square' onClick={() => {setPlay(false), setTimerSeconds(60)}}></i></div>}
+            {play && <div title="Stop game" className="stop-button"><i class='bx bxs-square' onClick={() => {setPlay(false), setTimerSeconds(60)}}></i></div>}
             <div className="game-info">
                 <button onClick={() => {setShowInfo(!showInfo)}}>?</button>
             </div>
