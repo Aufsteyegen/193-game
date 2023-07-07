@@ -6,7 +6,7 @@ const db_password = process.env.DB_PASSWORD
 
 if (process.env.NODE_ENV === 'production') {
   pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.DB_HOSTED_URL,
     ssl: {
       rejectUnauthorized: false
     }
