@@ -20,6 +20,27 @@ an account to save and load data on different devices.
 - Press the ``play`` button or the ``1`` key to start. 
 - Press the ``1`` key to pick the first (i.e., leftmost) country. To select the neighboring country to the right of the first one, press the ``2`` key, and so on.
 
+## Known bugs
+
+- Autocompleted login fields are not registered correctly by the server. For now, manually enter your email and password.
+
+## TODO
+
+- Implement a "forgotten password" feature.
+- Implement Google and GitHub SSO.
+
+## Running the project on your local machine
+
+# Running the frontend
+
+1. Clone this repo.
+2. Run ```npm install``` to install dependencies.
+3. Run ```npm start```.
+
+# Running the backend
+
+- Modify the ```db.js``` and ```server.js``` files accordingly. 
+
 ## Attributions
 
 Country outlines (SVGs) were [adapted from Etsy](https://www.etsy.com/listing/1174609901/individual-world-countries-maps-svg) and converted to 3D models using Blender and ``gltfjsx``.

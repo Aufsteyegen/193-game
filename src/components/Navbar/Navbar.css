@@ -123,7 +123,8 @@
 .register-box {
     background: orange;
     max-height: 320px;
-    min-height: 270px;
+    height: fit-content;
+    overflow-y: scroll;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -135,6 +136,42 @@
     margin-top: 50%;
     z-index: 200;
     font-family: 'Rajdhani', sans-serif;
+}
+
+.info-divider {
+    height: 1px;
+    border: 0.5px solid black;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.register-box-info {
+    background: orange;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-height: 470px;
+    height: fit-content;
+    overflow-y: scroll;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    font-weight: 600;
+    margin-top: 50%;
+    z-index: 200;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.register-box-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .confirmed-registration {
@@ -193,6 +230,11 @@ label {
 
 .logged-in {
     background-color: rgb(5, 193, 5);
+}
+
+.erase-confirm-message {
+    margin-top: 20px;
+    text-align: center;
 }
 
 .submit-button {

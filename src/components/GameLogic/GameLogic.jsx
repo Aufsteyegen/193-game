@@ -74,7 +74,7 @@ export default function GameLogic({ play, setPlay,
                 return
           }
           let pressed = [...isPressed]
-          if (play && e.key === '1' || e.key === '2' || e.key === '3' || e.key ==='4') {
+          if (play && (e.key === '1' || e.key === '2' || e.key === '3' || e.key ==='4')) {
             let newTotalGuesses = totalGuesses + 1
             setTotalGuesses(newTotalGuesses)
           }
@@ -140,7 +140,6 @@ export default function GameLogic({ play, setPlay,
               setSlot3Idx(newSlot3Idx)
               setSlot3(slot3Answers[newSlot3Idx])
             } else if (correctGuess === 4) {
-              console.log(slot4, slot4Idx)
               const newSlot4Idx = slot4Idx == 38 ? 0 : slot4Idx + 1
               setSlot4Idx(newSlot4Idx)
               setSlot4(slot4Answers[newSlot4Idx])

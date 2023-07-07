@@ -39,17 +39,16 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body
+        const { email, password,  } = req.body
         const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email])
         if (existingUser.rows.length === 0) {
-            
-            return res.status(401).send('Email not found.')
+            return res.status(401).send({ message: 'Email not found.' })
         }
         const { password: hashedPassword, wins, total_guesses,
                 correct_guesses, longest_streak } = existingUser.rows[0]
         const isPasswordValid = await bcrypt.compare(password, hashedPassword)
         if (!isPasswordValid) {
-            return res.status(401).send('Invalid password.')
+            return res.status(401).send({ message: 'Wrong password.' })
         }
         const token = jwt.sign({ email, wins, total_guesses, correct_guesses,
                                  longest_streak }, secretKey, { expiresIn: '7d' })

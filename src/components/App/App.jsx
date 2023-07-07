@@ -95,7 +95,8 @@ export default function App() {
     })
     return (
         <div className="app">
-            <NavBar wins={wins} totalGuesses={totalGuesses} correctGuesses={correctGuesses} 
+            <NavBar wins={wins} setWins={setWins} totalGuesses={totalGuesses} setTotalGuesses={setTotalGuesses} 
+                    correctGuesses={correctGuesses} setCorrectGuesses={setCorrectGuesses}
                     bestWinTime={bestWinTime} longestStreak={longestStreak} 
                     setLongestStreak={setLongestStreak} setPlay={setPlay} play={play}
                     setTimerSeconds={setTimerSeconds}
@@ -108,8 +109,8 @@ export default function App() {
                 <Timer play={play} setPlay={setPlay} 
                        setIsPressed={setIsPressed} 
                        setStreak={setStreak}
-                       correctGuess={correctGuess} increaseStreak={increaseStreak}
-                       setIncreaseStreak={setIncreaseStreak}
+                       correctGuess={correctGuess} setCorrectGuesses={setCorrectGuesses } increaseStreak={increaseStreak}
+                       setIncreaseStreak={setIncreaseStreak} setTotalGuesses={setTotalGuesses}
                        timerSeconds={timerSeconds} setTimerSeconds={setTimerSeconds}
                        won={won} setWon={setWon} streak={streak}
                        longestStreak={longestStreak} setLongestStreak={setLongestStreak} />

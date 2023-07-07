@@ -2,7 +2,7 @@ import * as React from "react"
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from "react"
 import { COMPONENT_MAP } from "/src/utils/constants.js"
-import { Float, Loader, Stage, Backdrop } from '@react-three/drei'
+import { Float, Stage, Backdrop } from '@react-three/drei'
 import R3F_LoadingScreen from "../R3F_LoadingScreen/R3F_LoadingScreen"
 import "./R3F.css"
 
@@ -59,7 +59,6 @@ export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
             </>
                 )}
             </Canvas>
-            <Loader />
         </div>
     )
 }
