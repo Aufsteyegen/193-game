@@ -106,7 +106,7 @@ export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrect
         <div>
         <div className="navbar">
             <div className="title">
-                <h1>193.github.io</h1>
+                <h1>193</h1>
             </div>
             <div className="class-divider"></div>
             <div className="user-stats">

@@ -1,4 +1,4 @@
-# Notes about 193.github.io
+# Notes about 193
 
 ## What is this?
 
