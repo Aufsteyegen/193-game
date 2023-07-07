@@ -1,4 +1,6 @@
-const out = {
+/** @type {import('vite').UserConfig} */
+
+export default {
     build: {
       rollupOptions: {
         external: [
@@ -6,7 +8,5 @@ const out = {
         ],
       },
     },
-  };
-  
-  export default out;
+  }
   
