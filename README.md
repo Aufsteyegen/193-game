@@ -31,13 +31,13 @@ an account to save and load data on different devices.
 
 ## Running the project on your local machine
 
-# Running the frontend
+### Running the frontend
 
 1. Clone this repo.
 2. Run ```npm install``` to install dependencies.
 3. Run ```npm start```.
 
-# Running the backend
+### Running the backend
 
 - Modify the ```db.js``` and ```server.js``` files accordingly. 
 
