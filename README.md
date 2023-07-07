@@ -5,6 +5,8 @@
 A React-three-fiber based webgame to challenge your geography knowledge! Given a 
 country flag, choose the correct country outline from a set of four outlines. Get a streak of 193 to win.
 
+![193 game thumbnail](src/assets/193-thumbnail.png)
+
 A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
 
 Game stats include the following: wins, total guesses, correct guesses,
