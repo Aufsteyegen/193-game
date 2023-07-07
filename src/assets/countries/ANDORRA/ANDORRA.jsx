@@ -7,7 +7,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Andorra(props) {
-  const { nodes, materials } = useGLTF('src/assets/countries/Andorra/ANDORRA.glb')
+  const { nodes, materials } = useGLTF('src/assets/countries/Andorra/Andorra.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
@@ -15,4 +15,4 @@ export function Andorra(props) {
   )
 }
 
-useGLTF.preload('src/assets/countries/Andorra/ANDORRA.glb')
+useGLTF.preload('src/assets/countries/Andorra/Andorra.glb')
