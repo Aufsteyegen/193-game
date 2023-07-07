@@ -17,8 +17,7 @@ export default function GameLogic({ play, setPlay,
                                     solved, setSolved,
                                     setStreak, setIncreaseStreak,
                                     totalGuesses, setTotalGuesses,
-                                    correctGuesses, setCorrectGuesses,
-                                    showLogin, showSignup }) {
+                                    correctGuesses, setCorrectGuesses }) {
 
     // copy the imported array of country names
     const [countries, setCountries] = useState(COUNTRIES.slice())
