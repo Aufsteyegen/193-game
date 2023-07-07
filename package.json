@@ -6,8 +6,12 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "start": "vite",
+    "start": "next start",
     "devStart": "nodemon server.js"
+  },
+  "engines": {
+    "node": "18.16.1",
+    "npm": "9.5.1"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.1.1",
