@@ -37,7 +37,7 @@ an account to save and load data on different devices.
 
 1. Clone this repo.
 2. Run ```npm install``` to install dependencies.
-3. Run ```npm start```.
+3. Run ```vite```.
 
 ### Running the backend
 
