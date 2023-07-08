@@ -28,6 +28,7 @@ an account to save and load data on different devices.
 
 ## TODO
 
+- Deploy! Troubleshooting import errors with vite config/externalization that currently prevent this.
 - Implement a "forgotten password" feature.
 - Implement Google and GitHub SSO.
 
