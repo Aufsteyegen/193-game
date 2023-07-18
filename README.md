@@ -1,4 +1,4 @@
-# Notes about 193.github.io
+# Notes about 193
 
 ## What is this?
 
@@ -31,13 +31,13 @@ an account to save and load data on different devices.
 - Implement a "forgotten password" feature.
 - Implement Google and GitHub SSO.
 
-## Running the project on your local machine
+## Running this project on your local machine
 
 ### Running the frontend
 
 1. Clone this repo.
 2. Run ```npm install``` to install dependencies.
-3. Run ```npm start```.
+3. Run ```vite```.
 
 ### Running the backend
 
