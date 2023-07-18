@@ -2,7 +2,7 @@
 
 ## What is this?
 
-A React-three-fiber based webgame to challenge your geography knowledge! Given a 
+A React-three-fiber-based webgame to challenge your geography knowledge! Given a 
 country flag, choose the correct country outline from a set of four outlines. Get a streak of 193 to win.
 
 ![193 game thumbnail](src/assets/193-thumbnail.png)
@@ -37,7 +37,7 @@ an account to save and load data on different devices.
 
 1. Clone this repo.
 2. Run ```npm install``` to install dependencies.
-3. Run ```vite```.
+3. Run ```npm start```.
 
 ### Running the backend
 

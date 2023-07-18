@@ -6,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "start": "next start",
+    "vite": "npm run build && npm run dev",
     "devStart": "nodemon server.js"
   },
   "engines": {
