@@ -2,12 +2,13 @@ import * as React from "react"
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from "react"
 import { COMPONENT_MAP } from "/src/utils/constants.js"
-import { Float, Stage, Backdrop } from '@react-three/drei'
+import { Float, Stage, Backdrop, Loader } from '@react-three/drei'
 import R3F_LoadingScreen from "../R3F_LoadingScreen/R3F_LoadingScreen"
 import "./R3F.css"
 
 export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
     return (
+        
         <div className="canvas-container">
             <Canvas camera={{ position: [0, -1, 25], fov: 35 }}>
                 <spotLight position={[0, 15, 5]} intensity={10} penumbra={1} angle={0.60} color="#0c8cbf" />
@@ -59,6 +60,7 @@ export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
             </>
                 )}
             </Canvas>
+            <Loader />
         </div>
     )
 }
