@@ -41,7 +41,7 @@
   "main": "next.config.js",
   "devDependencies": {
     "nodemon": "^2.0.22",
-    "vite": "^4.3.9"
+    "vite": "^4.4.8"
   },
   "keywords": [],
   "author": "",
