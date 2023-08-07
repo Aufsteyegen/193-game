@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function RepublicoftheCongo(props) {
-  const { nodes, materials } = useGLTF("src/components/countries/RepublicoftheCongo/RepublicoftheCongo.glb");
+  const { nodes, materials } = useGLTF("RepublicoftheCongo/RepublicoftheCongo.glb");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -19,4 +19,4 @@ export function RepublicoftheCongo(props) {
   );
 }
 
-useGLTF.preload("src/components/countries/RepublicoftheCongo/RepublicoftheCongo.glb");
+useGLTF.preload("RepublicoftheCongo/RepublicoftheCongo.glb");

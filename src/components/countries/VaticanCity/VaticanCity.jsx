@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function VaticanCity(props) {
-  const { nodes, materials } = useGLTF('src/components/countries/VaticanCity/VaticanCity.glb');
+  const { nodes, materials } = useGLTF('VaticanCity.glb');
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -20,4 +20,4 @@ export function VaticanCity(props) {
   );
 }
 
-useGLTF.preload('src/components/countries/VaticanCity/VaticanCity.glb');
+useGLTF.preload('VaticanCity.glb');

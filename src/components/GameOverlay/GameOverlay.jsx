@@ -60,12 +60,12 @@ export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
                 <img
                     src={
                           correctGuess == 1
-                        ? `/src/assets/flags/${slot1}.png`
+                        ? `flags/${slot1}.png`
                         : correctGuess == 2
-                        ? `/src/assets/flags/${slot2}.png`
+                        ? `flags/${slot2}.png`
                         : correctGuess == 3 ? 
-                        `/src/assets/flags/${slot3}.png` 
-                        : `/src/assets/flags/${slot4}.png` 
+                        `flags/${slot3}.png` 
+                        : `flags/${slot4}.png` 
                     }
                     alt={
                         correctGuess == 1
