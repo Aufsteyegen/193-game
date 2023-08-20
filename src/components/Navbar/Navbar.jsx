@@ -105,30 +105,36 @@ export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrect
     return (
         <div>
         <div className="navbar">
+            
+            <div className="navbar-stats">
             <div className="title">
-                <h1>193.github.io</h1>
+                <h1>193 game</h1>
             </div>
-            <div className="class-divider"></div>
-            <div className="user-stats">
-                <div>Wins: {wins}</div>
-                <div>Total guesses: {totalGuesses}</div>
-                <div>Correct guesses: {correctGuesses}</div>
+            <div>
+                <div className="user-stats"><span>Wins:<span className="space"></span></span><span> {wins}</span></div>
+                <div className="user-stats"><span>Total guesses:<span className="space"></span></span><span>{totalGuesses}</span></div>
             </div>
-            <div className="user-stats">
-                <div>Longest streak: {longestStreak}</div>
-                <div>Best win time: {bestWinTime}</div>
-                <div>Accuracy: {totalGuesses > 0 ? ((correctGuesses / totalGuesses) * 100).toFixed(2) : 100}%</div>
+            <div>
+                <div className="user-stats"><span>Correct guesses:<span className="space"></span></span><span>{correctGuesses}</span></div>
+                <div className="user-stats"><span>Longest streak:<span className="space"></span></span><span>{longestStreak}</span></div>
             </div>
-            <div className="data-sync">Data sync status: {!loggedIn ? "Not logged in" : updateStatus === "" || play ? "—" : updateStatus}</div>
+            <div>
+                <div className="user-stats"><span>Best win time:<span className="space"></span></span><span>{bestWinTime}</span></div>
+                <div className="user-stats"><span>Accuracy:<span className="space"></span></span><span>{totalGuesses > 0 ? ((correctGuesses / totalGuesses) * 100).toFixed(2) : 100}%</span></div>
+            </div>
+            </div>
             {play && <div title="Stop game" className="stop-button"><i className='bx bxs-square' onClick={() => {setPlay(false), setTimerSeconds(60)}}></i></div>}
             <div className="game-info">
                 <button onClick={() => {setShowInfo(!showInfo)}}>?</button>
             </div>
+            <div className="game-info">
+                <button onClick={() => {setShowInfo(!showInfo)}}>Stats</button>
+            </div>
             <div className="load-user-data">
-                <button onClick={!loggedIn ? () => {setShowLogin(!showLogin)} : () => {setShowEraseData(!showEraseData)}}>{loggedIn ? "Log out" : "Load data"}</button>
+                <button onClick={!loggedIn ? () => {setShowLogin(!showLogin)} : () => {setShowEraseData(!showEraseData)}}>{loggedIn ? "Log out" : "Load"}</button>
             </div>
             <div className={`user-data ${loggedIn ? 'logged-in' : ""}`}>
-                <button onClick={() => {setShowSignup(!showSignup)}}>Save data</button>
+                <button onClick={() => {setShowSignup(!showSignup)}}>Save</button>
             </div>
         </div>
 

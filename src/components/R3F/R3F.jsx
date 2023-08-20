@@ -60,7 +60,24 @@ export default function R3F({ play, slot1, slot2, slot3, slot4 }) {
             </>
                 )}
             </Canvas>
-            <Loader />
+            <Loader
+                containerStyles={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                }}
+                innerStyles={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                }}
+                barStyles={{
+                    backgroundColor: 'orange',
+                }}
+                dataStyles={{
+                    color: 'white',
+                    fontFamily: "'Rajdhani', sans-serif",
+                    fontSize: '16px',
+                }}
+                dataInterpolation={(p) => `Loading ${p.toFixed(2)}%`}
+                initialState={(active) => active}
+            />
         </div>
     )
 }

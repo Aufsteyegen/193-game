@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Text3D, Float, Center, Environment } from '@react-three/drei'
 
 export default function R3F_LoadingScreen ({ play }) {

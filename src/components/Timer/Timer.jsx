@@ -9,7 +9,6 @@ export default function Timer({ play, setPlay, setIsPressed, setStreak,
     const [pageLoadMessage, setPageLoadMessage] = useState(false)
     const { seconds, minutes, start, pause, reset } = useStopwatch({ autoStart: false })
     useEffect(() => {
-        
         if (play) {
             reset()
             start()
