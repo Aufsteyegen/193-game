@@ -2,12 +2,14 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     background-color: rgba(38, 38, 38, 0.535);
-    height: 70px;
+   
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 70vw;
+    display: flex;
+    flex-direction: column;
     z-index: 150;
     display: flex;
     margin-left: auto;
@@ -16,6 +18,18 @@
     font-family: 'Rajdhani', sans-serif;
     padding: 10px;
     padding-bottom: 0px;
+}
+
+.stat-info {
+    display: flex;
+    border-top: 1px solid orange;
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(255, 115, 0, 0.5);
+    backdrop-filter: blur(15px);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    justify-content: space-between;
 }
 
 .space {
@@ -27,15 +41,23 @@
     justify-content: center;
 }
 
+.show-stats {
+    background: white;
+    color: black;
+}
+
+.hide-stats {
+    background: orange;
+    color: white;
+}
+
 .user-stats {
     display: flex;
-    margin-bottom: 5px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: white;
     overflow-y: scroll;
-    margin-right: 15px;
 }
 
 .bxs-square {
@@ -204,7 +226,7 @@ form {
     flex-direction: column;
 }
 
-.user-data:hover, .load-user-data:hover, .game-info:hover {
+.user-data:hover, .load-user-data:hover, .game-info:hover, .load-user-data-2:hover {
     color: black;
     background: white;
 }

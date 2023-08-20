@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useStopwatch } from 'react-timer-hook'
+import { useAppContext } from '../AppContext'
 import "./Timer.css"
 
-export default function Timer({ play, setPlay, setIsPressed, setStreak, 
-                                increaseStreak, setIncreaseStreak,
-                                timerSeconds, setTimerSeconds,
-                                won, setWon, streak, longestStreak, setLongestStreak }) {
+export default function Timer() {
+    const { play, setPlay, setIsPressed, setStreak, increaseStreak, setIncreaseStreak,
+            timerSeconds, setTimerSeconds, won, setWon, streak, longestStreak, 
+            setLongestStreak } = useAppContext()
     const [pageLoadMessage, setPageLoadMessage] = useState(false)
     const { seconds, minutes, start, pause, reset } = useStopwatch({ autoStart: false })
     useEffect(() => {

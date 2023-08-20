@@ -5765,8 +5765,8 @@ Command: npx gltfjsx@6.2.3 /Users/main/Desktop/3143-game/Timor-Leste.glb -o /Use
 
 
 
-export function Timor_Leste(props) {
-  const { nodes, materials } = useGLTF('Timor_Leste.glb')
+export function TimorLeste(props) {
+  const { nodes, materials } = useGLTF('TimorLeste.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.005']} material-roughness={0.10} material-metalness={0.80} material-color="grey" />
@@ -5778,7 +5778,7 @@ export function Timor_Leste(props) {
   )
 }
 
-useGLTF.preload('Timor_Leste.glb')
+useGLTF.preload('TimorLeste.glb')
 
 
 /*

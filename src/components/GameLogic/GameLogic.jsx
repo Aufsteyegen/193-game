@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
+import { useAppContext } from '../AppContext'
 import { shuffleArray } from "/src/utils/shuffleLogic"
 import { COUNTRIES } from "/src/utils/constants.js"
 import R3F from "../R3F/R3F"
@@ -11,14 +12,12 @@ function chooseSlot() {
     return randomNum
 }
 
-export default function GameLogic({ play, setPlay, 
-                                    isPressed, setIsPressed,
-                                    correctGuess, setCorrectGuess, 
-                                    solved, setSolved,
-                                    setStreak, setIncreaseStreak,
-                                    totalGuesses, setTotalGuesses,
-                                    correctGuesses, setCorrectGuesses,
-                                    showLogin, showSignup }) {
+export default function GameLogic() {
+    const { play, setPlay, isPressed, setIsPressed,
+            correctGuess, setCorrectGuess, solved, setSolved,
+            setStreak, setIncreaseStreak, totalGuesses, setTotalGuesses,
+            correctGuesses, setCorrectGuesses, slot1, setSlot1,
+            slot2, setSlot2, slot3, setSlot3, slot4, setSlot4 } = useAppContext()
 
     // copy the imported array of country names
     const [countries, setCountries] = useState(COUNTRIES.slice())
@@ -34,12 +33,6 @@ export default function GameLogic({ play, setPlay,
     const [slot2Idx, setSlot2Idx] = useState(0)
     const [slot3Idx, setSlot3Idx] = useState(0)
     const [slot4Idx, setSlot4Idx] = useState(0)
-
-    // name of country in each slot displayed to user
-    const [slot1, setSlot1] = useState(null)
-    const [slot2, setSlot2] = useState(null)
-    const [slot3, setSlot3] = useState(null)
-    const [slot4, setSlot4] = useState(null)
 
     useEffect(() => {
         let newCountriesCopy = [...countries]
@@ -154,11 +147,7 @@ export default function GameLogic({ play, setPlay,
           slot3Answers, slot3Idx, slot4Answers, setIncreaseStreak])
     return (
         <>
-            <GameOverlay play={play} setPlay={setPlay} 
-                                isPressed={isPressed} setIsPressed={setIsPressed} 
-                                correctGuess={correctGuess}
-                                slot1={slot1} slot2={slot2}
-                                slot3={slot3} slot4={slot4} />
+            <GameOverlay />
             <R3F play={play} setPlay={setPlay} slot1={slot1} slot2={slot2}
                                                slot3={slot3} slot4={slot4}
                                                isPressed={isPressed}

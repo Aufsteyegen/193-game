@@ -1,4 +1,5 @@
 import "./GameOverlay.css"
+import { useAppContext } from '../AppContext'
 import * as React from "react"
 
 function addSpaces(name) {
@@ -12,7 +13,7 @@ function addSpaces(name) {
     if (name == "DemocraticPeoplesRepublicofKorea") return "North Korea (DPRK)"
     if (name == "RepublicofKorea") return "South Korea (KOR)"
     if (name == "UnitedStatesofAmerica") return "United States of America"
-    if (name == "Timor_Leste") return "Timor Leste"
+    if (name == "TimorLeste") return "Timor Leste"
     if (name == "RepublicoftheCongo") return "Republic of the Congo"
     if (name.includes(' ')) {
       return name
@@ -40,9 +41,9 @@ function addSpaces(name) {
     return spacedName
 }
 
-export default function GameOverlay({ play, setPlay, isPressed, correctGuess,
-                                      slot1, slot2, slot3, slot4 }) {                             
-
+export default function GameOverlay() {
+    const { play, setPlay, isPressed, correctGuess,
+            slot1, slot2, slot3, slot4 } = useAppContext()
     return (
       <div className="game-overlay">
         <div className={`loading-background ${!play ? 'fade-in' : 'fade-out'}`}>

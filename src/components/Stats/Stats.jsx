@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useAppContext } from '../AppContext'
 import "./Stats.css" 
 
-export default function Stats({ streak, play, increaseStreak }) {
+export default function Stats() {
+    const { streak, play, increaseStreak } = useAppContext()
     const [isStreakChanged, setIsStreakChanged] = useState(false)
     useEffect(() => {
         setIsStreakChanged(true)

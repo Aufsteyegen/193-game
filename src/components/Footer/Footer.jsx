@@ -1,7 +1,9 @@
 import * as React from "react"
 import "./Footer.css"
+import { useAppContext } from '../AppContext'
 
-export default function Footer ({ play }) {
+export default function Footer () {
+    const { play } = useAppContext()
     return (
         <>
             <div className={`footer ${!play ? 'fade-in' : 'fade-out'}`}></div>

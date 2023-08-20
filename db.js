@@ -5,14 +5,11 @@ dotenv.config()
 
 const { Pool } = pg
 
-const db_password = process.env.DB_PASSWORD
-
 const pool = new Pool({
   user: 'postgres',
-  password: db_password,
-  host: 'localhost',
+  password: process.env.DB_193_DATABASE_PASS,
+  host: process.env.DB_193_DATABASE_HOST,
   port: 5432,
-  database: 'webgame193',
 })
 
 export default pool

@@ -1,16 +1,21 @@
 import * as React from "react"
 import axios from "axios"
 import { useState } from 'react'
+import { useAppContext } from '../AppContext'
 import "./Navbar.css"
 import jwt_decode from 'jwt-decode'
 
-export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrectGuesses, correctGuesses, bestWinTime,
-                                 longestStreak, setLongestStreak, setPlay, play,
-                                 setTimerSeconds, showLogin, setShowLogin,
-                                 showSignup, setShowSignup, loggedIn, setLoggedIn,
-                                 registered, setRegistered, updateStatus, setWins }) {
+export default function Navbar() {
+    
+    const { wins, totalGuesses, setTotalGuesses, setCorrectGuesses, correctGuesses, bestWinTime,
+            longestStreak, setLongestStreak, setPlay, play,
+            setTimerSeconds, showLogin, setShowLogin,
+            showSignup, setShowSignup, loggedIn, setLoggedIn,
+            registered, setRegistered, updateStatus, setWins } = useAppContext()
     const [incorrectConfirmation, setIncorrectConfirmation] = useState(true)
     const [showInfo, setShowInfo] = useState(false)
+
+    const [showStats, setShowStats] = useState(false)
 
     const [showEraseData, setShowEraseData] = useState(false)
 
@@ -93,7 +98,7 @@ export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrect
                 
                 console.log('User registered successfully:', response.data)
                 setRegistered(true)
-              } catch (error) {
+            } catch (error) {
                 setRegistrationError(true)
                 
                 setShowRegistrationError(error.response.data)
@@ -105,30 +110,17 @@ export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrect
     return (
         <div>
         <div className="navbar">
-            
             <div className="navbar-stats">
             <div className="title">
                 <h1>193 game</h1>
             </div>
-            <div>
-                <div className="user-stats"><span>Wins:<span className="space"></span></span><span> {wins}</span></div>
-                <div className="user-stats"><span>Total guesses:<span className="space"></span></span><span>{totalGuesses}</span></div>
-            </div>
-            <div>
-                <div className="user-stats"><span>Correct guesses:<span className="space"></span></span><span>{correctGuesses}</span></div>
-                <div className="user-stats"><span>Longest streak:<span className="space"></span></span><span>{longestStreak}</span></div>
-            </div>
-            <div>
-                <div className="user-stats"><span>Best win time:<span className="space"></span></span><span>{bestWinTime}</span></div>
-                <div className="user-stats"><span>Accuracy:<span className="space"></span></span><span>{totalGuesses > 0 ? ((correctGuesses / totalGuesses) * 100).toFixed(2) : 100}%</span></div>
-            </div>
-            </div>
             {play && <div title="Stop game" className="stop-button"><i className='bx bxs-square' onClick={() => {setPlay(false), setTimerSeconds(60)}}></i></div>}
+            
             <div className="game-info">
                 <button onClick={() => {setShowInfo(!showInfo)}}>?</button>
             </div>
-            <div className="game-info">
-                <button onClick={() => {setShowInfo(!showInfo)}}>Stats</button>
+            <div className="load-user-data">
+                <button onClick={() => {setShowStats(!showStats)}}>Stats</button>
             </div>
             <div className="load-user-data">
                 <button onClick={!loggedIn ? () => {setShowLogin(!showLogin)} : () => {setShowEraseData(!showEraseData)}}>{loggedIn ? "Log out" : "Load"}</button>
@@ -136,7 +128,22 @@ export default function Navbar({ wins, totalGuesses, setTotalGuesses, setCorrect
             <div className={`user-data ${loggedIn ? 'logged-in' : ""}`}>
                 <button onClick={() => {setShowSignup(!showSignup)}}>Save</button>
             </div>
+            </div>
+            {showStats && (
+                <>
+                    <div className="stat-info">
+                    <div className="user-stats"><span>Wins:<span className="space"></span></span><span> {wins}</span></div>
+                    <div className="user-stats"><span>Total guesses:<span className="space"></span></span><span>{totalGuesses}</span></div>
+                    <div className="user-stats"><span>Correct guesses:<span className="space"></span></span><span>{correctGuesses}</span></div>
+                    <div className="user-stats"><span>Longest streak:<span className="space"></span></span><span>{longestStreak}</span></div>
+                    <div className="user-stats"><span>Best win time:<span className="space"></span></span><span>{bestWinTime}</span></div>
+                    <div className="user-stats"><span>Accuracy:<span className="space"></span></span><span>{totalGuesses > 0 ? ((correctGuesses / totalGuesses) * 100).toFixed(2) : 100}%</span></div>
+                    </div>
+                </>
+            )}
+        
         </div>
+        
 
         <div className="register-box-wrapper">
             {(showLogin && !loggedIn) && (
