@@ -2,28 +2,17 @@
 
 ## What is this?
 
-<div style="display: flex; align-items: flex-start;">
-    <div style="flex: 1;">
-        A React-three-fiber based webgame to challenge your geography knowledge! Given a 
-        country flag, choose the correct country outline from a set of four outlines. 
-        193 countries are featured in total. Get a streak of 193 to win.<br/><br/>
-        <div>Play<a href="https://master.d1ljhlxy38o7oh.amplifyapp.com/"> HERE</a>.</div>
-    </div>
-    <div style="flex: 1; text-align: right;">
-        <img src="src/assets/Screenshot 2023-08-21 at 08.43.59.png" alt="Game Screenshot" width="200"/>
-    </div>
-</div>
+A React-three-fiber based webgame to challenge your geography knowledge! Given a 
+country flag, choose the correct country outline from a set of four outlines. 
+193 countries are featured in total. Get a streak of 193 to win.
 
+<div>Play<a href="https://master.d1ljhlxy38o7oh.amplifyapp.com/"> HERE</a>.</div>
 
-<div style="display: flex; align-items: flex-start;">
-    <div style="flex: 1;">
-        A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
-    </div>
-    <div style="flex: 1; text-align: right;">
-        <div>
-            <img src="src/assets/Screenshot 2023-08-21 at 08.45.42.png" width="200"/>
-        </div>
-    </div>
+<img src="src/assets/Screenshot 2023-08-21 at 08.43.59.png" alt="Game Screenshot"/>
+
+A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
+<div>
+    <img src="src/assets/Screenshot 2023-08-21 at 08.45.42.png"/>
 </div>
 
 
