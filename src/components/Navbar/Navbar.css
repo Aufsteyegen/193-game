@@ -20,6 +20,10 @@
     padding-bottom: 0px;
 }
 
+.disabled {
+    background:rgb(5, 193, 5);
+}
+
 .stat-info {
     display: flex;
     border-top: 1px solid orange;
@@ -112,12 +116,26 @@
     overflow-y: scroll;
     padding-right: 10px;
     height: 35px;
-    color: rgb(255, 255, 255);
-    background: orange;
+    color: black;
+    background: gainsboro;
     align-self: flex-end;
 }
 
 .load-user-data {
+    display: flex;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    overflow-y: scroll;
+    color: black;
+    background: gainsboro;
+    align-self: flex-end;
+}
+
+.load-user-data-4 {
     display: flex;
     margin-left: 5px;
     font-size: 16px;
@@ -226,7 +244,7 @@ form {
     flex-direction: column;
 }
 
-.user-data:hover, .load-user-data:hover, .game-info:hover, .load-user-data-2:hover {
+.game-info:hover, .load-user-data-4:hover {
     color: black;
     background: white;
 }

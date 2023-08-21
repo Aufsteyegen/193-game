@@ -2,35 +2,49 @@
 
 ## What is this?
 
-A React-three-fiber based webgame to challenge your geography knowledge! Given a 
-country flag, choose the correct country outline from a set of four outlines. Get a streak of 193 to win.
+<div style="display: flex; align-items: flex-start;">
+    <div style="flex: 1;">
+        A React-three-fiber based webgame to challenge your geography knowledge! Given a 
+        country flag, choose the correct country outline from a set of four outlines. 
+        193 countries are featured in total. Get a streak of 193 to win.<br/><br/>
+        <div>Play<a href="https://master.d1ljhlxy38o7oh.amplifyapp.com/"> HERE</a>.</div>
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <img src="src/assets/Screenshot 2023-08-21 at 08.43.59.png" alt="Game Screenshot" width="200"/>
+    </div>
+</div>
 
-[Play here.](https://master.d1ljhlxy38o7oh.amplifyapp.com/)
 
-![193 game thumbnail](src/assets/193-thumbnail.png)
+<div style="display: flex; align-items: flex-start;">
+    <div style="flex: 1;">
+        A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <div>
+            <img src="src/assets/Screenshot 2023-08-21 at 08.45.42.png" width="200"/>
+        </div>
+    </div>
+</div>
 
-A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
 
-Game stats include the following: wins, total guesses, correct guesses,
-longest streak, best win time, and accuracy. These will be saved to your
-browser's local storage by default (meaning that it will persist across
-refreshes and browser restarts for a particular browser). You can also create
+
+
+
+Wins, total guesses, correct guesses,
+longest streak, best win time, and accuracy are recorded. 
+
+These will be saved to your browser's local storage by default (meaning that it will persist across refreshes and browser restarts for a particular browser). You can also create
 an account to save and load data on different devices.
-
-193 countries are featured in total. If you believe a correction should be made, please reach out!
 
 ## Controls
 
 - Press the ``play`` button or the ``1`` key to start. 
 - Press the ``1`` key to pick the first (i.e., leftmost) country. To select the neighboring country to the right of the first one, press the ``2`` key, and so on.
 
-## Known bugs
-
-- Autocompleted login fields are not registered correctly by the server. For now, manually enter your email and password.
-
 ## TODO
 
 - Finalize backend deployment.
+- Frontend animations.
 
 ## Attributions
 

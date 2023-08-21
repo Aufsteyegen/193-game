@@ -119,14 +119,14 @@ export default function Navbar() {
             <div className="game-info">
                 <button onClick={() => {setShowInfo(!showInfo)}}>?</button>
             </div>
-            <div className="load-user-data">
+            <div className="load-user-data-4">
                 <button onClick={() => {setShowStats(!showStats)}}>Stats</button>
             </div>
-            <div className="load-user-data">
-                <button onClick={!loggedIn ? () => {setShowLogin(!showLogin)} : () => {setShowEraseData(!showEraseData)}}>{loggedIn ? "Log out" : "Load"}</button>
+            <div className="load-user-data disabled">
+                <button onClick={!loggedIn ? () => {setShowLogin(!showLogin)} : () => {setShowEraseData(!showEraseData)}} disabled>{loggedIn ? "Log out" : "Log in"}</button>
             </div>
-            <div className={`user-data ${loggedIn ? 'logged-in' : ""}`}>
-                <button onClick={() => {setShowSignup(!showSignup)}}>Save</button>
+            <div className={`disabled user-data ${loggedIn ? 'logged-in' : ""}`}>
+                <button onClick={() => {setShowSignup(!showSignup)}} disabled>Register</button>
             </div>
             </div>
             {showStats && (
