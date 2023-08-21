@@ -8,7 +8,7 @@ async function handleLogin(event) {
                 email: loginEmail,
                 password: loginPassword
             }
-            const response = await axios.post('http://localhost:3000/login', { loginData })
+            const response = await axios.post('https://l2423ek0yd.execute-api.us-east-1.amazonaws.com/api/login', { loginData })
             const token = response.data.token
             const decodedToken = jwt_decode(token)
 
@@ -43,7 +43,7 @@ async function handleSubmit(event) {
                 correctGuesses: correctGuesses,
                 longestStreak: longestStreak
             }
-            const response = await axios.post('http://localhost:3000/register', { userData })
+            const response = await axios.post(' https://l2423ek0yd.execute-api.us-east-1.amazonaws.com/api/register', { userData })
             
             console.log('User registered successfully:', response.data)
             setRegistered(true)

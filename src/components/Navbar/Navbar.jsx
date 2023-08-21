@@ -42,7 +42,7 @@ export default function Navbar() {
                     email: loginEmail,
                     password: loginPassword
                 }
-                const response = await axios.post('http://localhost:3000/login', loginData)
+                const response = await axios.post('https://l2423ek0yd.execute-api.us-east-1.amazonaws.com/api/login', loginData)
                 const token = response.data.token
                 const decodedToken = jwt_decode(token)
 
@@ -94,7 +94,7 @@ export default function Navbar() {
                     correctGuesses: correctGuesses,
                     longestStreak: longestStreak
                 }
-                const response = await axios.post('http://localhost:3000/register', userData)
+                const response = await axios.post('https://l2423ek0yd.execute-api.us-east-1.amazonaws.com/api/register', userData)
                 
                 console.log('User registered successfully:', response.data)
                 setRegistered(true)
@@ -112,7 +112,7 @@ export default function Navbar() {
         <div className="navbar">
             <div className="navbar-stats">
             <div className="title">
-                <h1>193 game</h1>
+                <h1>193 Game</h1>
             </div>
             {play && <div title="Stop game" className="stop-button"><i className='bx bxs-square' onClick={() => {setPlay(false), setTimerSeconds(60)}}></i></div>}
             

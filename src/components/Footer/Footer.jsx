@@ -6,7 +6,9 @@ export default function Footer () {
     const { play } = useAppContext()
     return (
         <>
-            <div className={`footer ${!play ? 'fade-in' : 'fade-out'}`}></div>
+            <div className={`footer ${!play ? 'fade-in' : 'fade-out'}`}>
+                <div>Made by Aufsteyegen</div>
+            </div>
         </>
     )
 }

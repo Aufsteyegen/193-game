@@ -37,7 +37,7 @@ app.post('/register', async (req, res) => {
     }
 })
 
-app.post('/login', async (req, res) => {
+app.get('/login', async (req, res) => {
     try {
         const { email, password,  } = req.body
         const existingUser = await pool.query('SELECT * FROM users WHERE email = $1', [email])
@@ -77,7 +77,7 @@ app.get('/login-retrieve', verifyToken, (req, res) => {
     res.send('Protected route accessed successfully!')
 })
 
-app.post('/update', async (req, res) => {
+app.put('/update', async (req, res) => {
     const { userData } = req.body
     const { email, wins, totalGuesses, correctGuesses, 
             longestStreak } = userData

@@ -13,7 +13,7 @@ export default function App() {
     const { setLoggedIn, setRegistered, setUpdateStatus,
             setLongestStreak, setPlay, wins, totalGuesses,
             correctGuesses, longestStreak, play, bestWinTime,
-            streak, loggedIn } = useAppContext()
+            streak, loggedIn, showLogin } = useAppContext()
     
     useEffect(() => {
         const token = localStorage.getItem('token')
@@ -40,7 +40,7 @@ export default function App() {
             }
         try {
             setUpdateStatus("")
-            const response = await axios.post('http://localhost:3000/update', {userData})
+            const response = await axios.post('https://l2423ek0yd.execute-api.us-east-1.amazonaws.com/api/update', {userData})
             setUpdateStatus(response.status)
         } catch (error) {
             console.error('Error updating row:', error)

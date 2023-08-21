@@ -5,6 +5,8 @@
 A React-three-fiber based webgame to challenge your geography knowledge! Given a 
 country flag, choose the correct country outline from a set of four outlines. Get a streak of 193 to win.
 
+[Play here.](https://master.d1ljhlxy38o7oh.amplifyapp.com/)
+
 ![193 game thumbnail](src/assets/193-thumbnail.png)
 
 A 60-second timer starts once ``play`` or the ``1`` key is pressed. If the correct outline is chosen on the first guess, your streak will increase by one and five seconds will be added to the timer. The timer will never exceed 60 seconds. 
@@ -28,20 +30,7 @@ an account to save and load data on different devices.
 
 ## TODO
 
-- Implement a "forgotten password" feature.
-- Implement Google and GitHub SSO.
-
-## Running this project on your local machine
-
-### Running the frontend
-
-1. Clone this repo.
-2. Run ```npm install``` to install dependencies.
-3. Run ```vite```.
-
-### Running the backend
-
-- Modify the ```db.js``` and ```server.js``` files accordingly. 
+- Finalize backend deployment.
 
 ## Attributions
 
